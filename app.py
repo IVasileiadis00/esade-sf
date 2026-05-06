@@ -284,11 +284,6 @@ elif page == "📊 Portfolio Holdings":
             use_container_width=True,
             hide_index=True,
             height=600,
-            column_config={
-                "Weight %":   st.column_config.ProgressColumn("Weight %", min_value=0, max_value=10, format="%.2f%%"),
-                "ESG Score":  st.column_config.ProgressColumn("ESG Score", min_value=0, max_value=100, format="%.1f"),
-                "Sharpe":     st.column_config.NumberColumn("Sharpe", format="%.3f"),
-            }
         )
 
         # ESG pillars chart
@@ -529,7 +524,7 @@ elif page == "⚠️ Greenwashing":
             return c
 
         st.dataframe(
-            gw_df.style.applymap(colour_rating, subset=[c for c in gw_df.columns if c not in ['ticker','high_count']]),
+            gw_df.style.map(colour_rating, subset=[c for c in gw_df.columns if c not in ['ticker','high_count']]),
             use_container_width=True,
             hide_index=True,
         )
