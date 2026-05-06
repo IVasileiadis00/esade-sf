@@ -1,0 +1,57 @@
+companyName,ticker,isin,country,bics_sector,bics_industry,bics_sub_industry,bics_activity,market_cap_eur_bn,index_weight_pct
+ASML Holding,ASML.AS,NL0010273215,Netherlands,Technology,Semiconductors,Semiconductor Equipment,Lithography Equipment,134.2,0.401
+SAP SE,SAP.DE,DE0007164600,Germany,Technology,Software,Enterprise Software,ERP Systems,333.0,0.766
+Capgemini,CAP.PA,FR0000125338,France,Technology,IT Services,Consulting,Digital Transformation,257.5,0.254
+Amadeus IT Group,AMS.MC,ES0109067019,Spain,Technology,Software,Travel Technology,GDS Platforms,211.5,1.206
+Hexagon AB,HEXA-B.ST,SE0015961909,Sweden,Technology,Industrial Software,Measurement Technology,Geospatial Solutions,58.8,1.422
+Siemens AG,SIE.DE,DE0007236101,Germany,Industrials,Electrical Equipment,Automation,Industrial Automation,58.8,1.023
+ABB Ltd,ABBN.SW,CH0012221716,Switzerland,Industrials,Electrical Equipment,Power & Automation,Robotics,25.0,2.918
+Schneider Electric,SU.PA,FR0000121972,France,Industrials,Electrical Equipment,Energy Management,Smart Buildings,303.8,1.313
+Airbus SE,AIR.PA,NL0000235190,Netherlands,Industrials,Aerospace & Defense,Commercial Aircraft,Commercial Aviation,212.4,1.055
+Rolls-Royce Holdings,RR.L,GB00B63H8491,UK,Industrials,Aerospace & Defense,Engines,Aerospace Engines,249.3,1.945
+Vestas Wind Systems,VWS.CO,DK0061539921,Denmark,Industrials,Industrial Equipment,Renewable Energy Equipment,Wind Turbines,12.1,0.579
+Legrand SA,LR.PA,FR0010307819,France,Industrials,Electrical Equipment,Wiring Devices,Building Infrastructure,339.6,2.827
+Novartis AG,NOVN.SW,CH0012005267,Switzerland,Healthcare,Pharmaceuticals,Innovative Medicines,Oncology,292.2,0.353
+Roche Holding,ROG.SW,CH0012032048,Switzerland,Healthcare,Pharmaceuticals,Diagnostics & Pharma,Personalised Medicine,78.3,3.455
+AstraZeneca,AZN.L,GB0009895292,UK,Healthcare,Pharmaceuticals,Biopharmaceuticals,Oncology & Cardiovascular,67.7,2.726
+Novo Nordisk,NOVO-B.CO,DK0060534915,Denmark,Healthcare,Pharmaceuticals,Diabetes Care,GLP-1 Therapies,68.3,0.776
+Sanofi,SAN.PA,FR0000120578,France,Healthcare,Pharmaceuticals,Specialty Care,Vaccines & Immunology,110.0,0.119
+Lonza Group,LONN.SW,CH0013841017,Switzerland,Healthcare,Life Sciences,CDMO,Biologics Manufacturing,186.0,2.873
+TotalEnergies SE,TTE.PA,FR0014000MR3,France,Energy,Integrated Oil & Gas,Upstream & Downstream,LNG & Renewables,154.0,2.503
+Shell plc,SHEL.L,GB00BP6MXD84,UK,Energy,Integrated Oil & Gas,Global Energy,Transition Energy,105.5,2.579
+Equinor ASA,EQNR.OL,NO0010096985,Norway,Energy,Integrated Oil & Gas,Offshore Operator,Norwegian Continental Shelf,216.1,2.722
+Orsted AS,ORSTED.CO,DK0060094928,Denmark,Utilities,Renewable Energy,Offshore Wind,Offshore Wind Development,53.1,0.352
+Iberdrola SA,IBE.MC,ES0144580Y14,Spain,Utilities,Electric Utilities,Regulated Networks,Renewables & Networks,105.8,1.319
+RWE AG,RWE.DE,DE0007037129,Germany,Utilities,Electric Utilities,Conventional & Renewables,Offshore Wind & Gas,131.4,0.494
+Enel SpA,ENEL.MI,IT0003128367,Italy,Utilities,Electric Utilities,Integrated Utility,Renewable Generation,162.3,3.035
+BNP Paribas,BNP.PA,FR0000131104,France,Financial Services,Banks,Diversified Banking,Corporate & Investment Bank,275.9,2.219
+HSBC Holdings,HSBA.L,GB0005405286,UK,Financial Services,Banks,Global Banking,Retail & Commercial,73.9,1.225
+ING Groep,INGA.AS,NL0011821202,Netherlands,Financial Services,Banks,Retail Banking,Digital Banking,182.4,0.316
+UniCredit SpA,UCG.MI,IT0005239360,Italy,Financial Services,Banks,Pan-European Banking,Corporate Banking,209.4,1.157
+AXA SA,CS.PA,FR0000120628,France,Financial Services,Insurance,Multi-line Insurance,Life & P&C,21.0,1.206
+Allianz SE,ALV.DE,DE0008404005,Germany,Financial Services,Insurance,Multi-line Insurance,Asset Management,214.6,2.581
+Zurich Insurance,ZURN.SW,CH0011075394,Switzerland,Financial Services,Insurance,General Insurance,Commercial Lines,63.8,2.268
+Unilever plc,ULVR.L,GB00B10RZP78,UK,Consumer Staples,Food & Beverage,Personal Care & Foods,FMCG,27.4,3.117
+Nestle SA,NESN.SW,CH0012221716,Switzerland,Consumer Staples,Food & Beverage,Packaged Foods,Nutrition & Wellness,332.4,1.706
+Danone SA,BN.PA,FR0000120644,France,Consumer Staples,Food & Beverage,Dairy & Plant-Based,Specialised Nutrition,338.1,0.507
+Heineken NV,HEIA.AS,NL0000009165,Netherlands,Consumer Staples,Food & Beverage,Beverages,Beer,283.9,2.525
+Carlsberg AS,CARL-B.CO,DK0010181759,Denmark,Consumer Staples,Food & Beverage,Beverages,Beer,110.1,2.687
+L'Oreal SA,OR.PA,FR0000120321,France,Consumer Discretionary,Personal Products,Beauty,Skincare & Cosmetics,38.7,2.008
+LVMH,MC.PA,FR0000121014,France,Consumer Discretionary,Luxury Goods,Fashion & Leather,Wines & Spirits,241.1,2.721
+Inditex,ITX.MC,ES0148396007,Spain,Consumer Discretionary,Retail,Apparel Retail,Fast Fashion,156.9,1.779
+Adidas AG,ADS.DE,DE000A1EWWW0,Germany,Consumer Discretionary,Apparel & Footwear,Sportswear,Performance & Lifestyle,47.1,1.877
+Pernod Ricard,RI.PA,FR0000120693,France,Consumer Staples,Food & Beverage,Spirits,Premium Spirits,175.8,1.554
+BASF SE,BAS.DE,DE000BASF111,Germany,Materials,Chemicals,Diversified Chemicals,Performance Products,16.9,0.186
+Air Liquide,AI.PA,FR0000120073,France,Materials,Chemicals,Industrial Gases,Healthcare Gases,318.7,0.467
+ArcelorMittal,MT.AS,LU1598757687,Luxembourg,Materials,Metals & Mining,Steel,Flat & Long Steel,94.3,0.207
+Holcim AG,HOLN.SW,CH0012214059,Switzerland,Materials,Construction Materials,Cement & Aggregates,Low-Carbon Building,233.6,2.264
+Volkswagen AG,VOW3.DE,DE0007664039,Germany,Consumer Discretionary,Automotive,Passenger Vehicles,EV Transition,112.5,1.169
+BMW AG,BMW.DE,DE0005190003,Germany,Consumer Discretionary,Automotive,Luxury Vehicles,Electric Mobility,184.4,1.829
+Stellantis NV,STLAM.MI,NL00150001Q9,Netherlands,Consumer Discretionary,Automotive,Multi-Brand Vehicles,EV & Combustion,193.6,3.186
+Volvo AB,VOLV-B.ST,SE0000115446,Sweden,Industrials,Commercial Vehicles,Trucks & Buses,Electrified Transport,68.8,0.948
+Renault SA,RNO.PA,FR0000131906,France,Consumer Discretionary,Automotive,Passenger Vehicles,EV Transition,339.5,1.495
+Deutsche Telekom,DTE.DE,DE0005557508,Germany,Telecommunications,Telecom Services,Integrated Telco,Fixed & Mobile,272.4,2.669
+Orange SA,ORA.PA,FR0000133308,France,Telecommunications,Telecom Services,Integrated Telco,B2B Services,329.1,0.878
+Vodafone Group,VOD.L,GB00BH4HKS39,UK,Telecommunications,Telecom Services,Mobile Networks,European Mobile,313.7,0.362
+Vonovia SE,VNA.DE,DE000A1ML7J1,Germany,Real Estate,Residential REITs,Residential Property,German Residential,211.3,1.085
+Gecina SA,GFC.PA,FR0010040865,France,Real Estate,Commercial REITs,Office & Residential,Paris Office Market,323.0,0.648

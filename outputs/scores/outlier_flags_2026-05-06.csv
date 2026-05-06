@@ -1,0 +1,33 @@
+column,company,value,mean,z_score,action
+scope1_emissions_tco2e,Shell plc,62283471.0,8146937.69,4.4,REVIEW — possible unit mismatch or data error
+scope2_emissions_market_tco2e,TotalEnergies SE,3664803.0,653076.04,3.2,REVIEW — possible unit mismatch or data error
+scope2_emissions_market_tco2e,Iberdrola SA,4459370.0,653076.04,4.0,REVIEW — possible unit mismatch or data error
+scope2_emissions_market_tco2e,Holcim AG,3514789.0,653076.04,3.0,REVIEW — possible unit mismatch or data error
+scope2_emissions_location_tco2e,TotalEnergies SE,3717154.0,688886.36,3.2,REVIEW — possible unit mismatch or data error
+scope2_emissions_location_tco2e,Iberdrola SA,4035114.0,688886.36,3.6,REVIEW — possible unit mismatch or data error
+scope3_emissions_tco2e,Shell plc,853567482.0,82793676.02,4.9,REVIEW — possible unit mismatch or data error
+total_energy_consumption_gwh,Equinor ASA,463479.5,90942.12,3.3,REVIEW — possible unit mismatch or data error
+total_energy_consumption_gwh,Orsted AS,458023.9,90942.12,3.3,REVIEW — possible unit mismatch or data error
+total_energy_consumption_gwh,Iberdrola SA,464094.3,90942.12,3.3,REVIEW — possible unit mismatch or data error
+water_withdrawal_m3,Shell plc,159044336.0,25456547.53,4.0,REVIEW — possible unit mismatch or data error
+water_withdrawal_m3,Orsted AS,137255199.0,25456547.53,3.4,REVIEW — possible unit mismatch or data error
+water_withdrawal_m3,Iberdrola SA,144553911.0,25456547.53,3.6,REVIEW — possible unit mismatch or data error
+water_consumption_m3,Shell plc,96985961.0,14333118.85,4.0,REVIEW — possible unit mismatch or data error
+water_consumption_m3,Orsted AS,108836709.0,14333118.85,4.6,REVIEW — possible unit mismatch or data error
+waste_generated_tonnes,Iberdrola SA,2563438.0,503491.13,3.7,REVIEW — possible unit mismatch or data error
+waste_generated_tonnes,Enel SpA,2970460.0,503491.13,4.4,REVIEW — possible unit mismatch or data error
+hazardous_waste_tonnes,Shell plc,141559.0,22845.53,4.9,REVIEW — possible unit mismatch or data error
+hazardous_waste_tonnes,Orsted AS,108980.0,22845.53,3.5,REVIEW — possible unit mismatch or data error
+carbon_intensity_tco2e_per_eur_m_revenue,Shell plc,29426.9,4095.46,3.8,REVIEW — possible unit mismatch or data error
+carbon_intensity_tco2e_per_eur_m_revenue,Orsted AS,25155.8,4095.46,3.2,REVIEW — possible unit mismatch or data error
+carbon_intensity_tco2e_per_eur_m_revenue,Enel SpA,27055.0,4095.46,3.5,REVIEW — possible unit mismatch or data error
+carbon_intensity_tco2e_per_eur_m_revenue,BASF SE,30035.6,4095.46,3.9,REVIEW — possible unit mismatch or data error
+anti_corruption_policy,Legrand SA,0.0,0.96,-4.7,REVIEW — possible unit mismatch or data error
+anti_corruption_policy,HSBC Holdings,0.0,0.96,-4.7,REVIEW — possible unit mismatch or data error
+anti_corruption_policy,Inditex,0.0,0.96,-4.7,REVIEW — possible unit mismatch or data error
+data_privacy_policy,ASML Holding,0.0,0.96,-4.7,REVIEW — possible unit mismatch or data error
+data_privacy_policy,UniCredit SpA,0.0,0.96,-4.7,REVIEW — possible unit mismatch or data error
+data_privacy_policy,Inditex,0.0,0.96,-4.7,REVIEW — possible unit mismatch or data error
+taxonomy_aligned_capex_pct,Orsted AS,19.2,4.76,3.1,REVIEW — possible unit mismatch or data error
+fossil_fuel_revenue_pct,TotalEnergies SE,6.8,1.02,5.5,REVIEW — possible unit mismatch or data error
+fossil_fuel_revenue_pct,Equinor ASA,5.9,1.02,4.6,REVIEW — possible unit mismatch or data error

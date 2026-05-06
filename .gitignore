@@ -1,0 +1,25 @@
+# Python virtual environment — never upload this
+venv/
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+**/.ipynb_checkpoints/
+
+# Mock price data (large file)
+data/market/
+
+# Temp Word lock files
+~$*.docx
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Sensitive / local config
+.env
+*.local
