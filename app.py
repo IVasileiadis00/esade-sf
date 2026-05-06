@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 import glob
+# v2
 
 st.set_page_config(page_title="ESADE Sustainable Finance", page_icon="🌱", layout="wide")
 st.title("🌱 ESADE Sustainable Finance Dashboard")
