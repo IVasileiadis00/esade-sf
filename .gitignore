@@ -23,3 +23,8 @@ Thumbs.db
 # Sensitive / local config
 .env
 *.local
+
+# Visual Studio / IDE files
+.vs/
+.claude/
+*.slnx
