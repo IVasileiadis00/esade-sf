@@ -1,31 +1,49 @@
-import pandas as pd, openpyxl, re
+import pandas as pd, re
 from difflib import SequenceMatcher
 
-STOXX_FILE = r'C:\Users\ionva\Desktop\Sustainable Finance Project\.claude\worktrees\tender-merkle-cddcc3\STOXX600_Outperformers_5Y_10Y.xlsx'
-CSV_FILE   = r'C:\Users\ionva\Desktop\Sustainable Finance Project\.claude\worktrees\tender-merkle-cddcc3\data\provided\equityBicsV2.csv'
-OUT_FILE   = r'C:\Users\ionva\Desktop\Sustainable Finance Project\.claude\worktrees\tender-merkle-cddcc3\data\provided\universe_170.csv'
+STOXX_FILE = r'C:\Users\ionva\Desktop\Sustainable Finance Project\STOXX600_Outperformers_5Y_10Y_with_tickers.xlsx'
+CSV_FILE   = r'C:\Users\ionva\Desktop\Sustainable Finance Project\data\provided\equityBicsV2.csv'
+OUT_FILE   = r'C:\Users\ionva\Desktop\Sustainable Finance Project\data\provided\universe_170.csv'
 
-EXCHANGE_MAP = {
-    'DE':'.DE','SE':'.ST','NL':'.AS','GB':'.L','CH':'.SW','FR':'.PA',
-    'IT':'.MI','ES':'.MC','NO':'.OL','FI':'.HE','DK':'.CO','BE':'.BR',
-    'AT':'.VI','PL':'.WA','PT':'.LS','IE':'.IR','LU':'.LU',
+# Bloomberg exchange code → Yahoo Finance suffix
+BB_TO_YF = {
+    'BB': '.BR',  # Euronext Brussels
+    'LN': '.L',   # London Stock Exchange
+    'NA': '.AS',  # Euronext Amsterdam
+    'SW': '.SW',  # SIX Swiss Exchange
+    'FP': '.PA',  # Euronext Paris
+    'IM': '.MI',  # Borsa Italiana
+    'SM': '.MC',  # BME Madrid
+    'SS': '.ST',  # Nasdaq Stockholm
+    'GR': '.DE',  # Xetra (Germany)
+    'FH': '.HE',  # Nasdaq Helsinki
+    'DC': '.CO',  # Nasdaq Copenhagen
+    'NO': '.OL',  # Oslo Bors
+    'PW': '.WA',  # Warsaw Stock Exchange
+    'AV': '.VI',  # Wiener Borse (Vienna)
+    'ID': '.IR',  # Euronext Dublin
+    'PL': '.LS',  # Euronext Lisbon
+    'VX': '.SW',  # SIX Swiss (alt code)
 }
 
-def stoxx_to_yf(t):
-    if not t or '-' not in str(t):
+def bb_to_yf_ticker(bb_ticker):
+    """Convert Bloomberg ticker 'ARGX BB' to Yahoo Finance ticker 'ARGX.BR'."""
+    if not bb_ticker or pd.isna(bb_ticker):
         return None
-    part, exch = str(t).rsplit('-', 1)
-    return part.replace('.', '-') + EXCHANGE_MAP.get(exch, '.' + exch)
+    parts = str(bb_ticker).strip().rsplit(' ', 1)
+    if len(parts) != 2:
+        return None
+    local, exch = parts
+    suffix = BB_TO_YF.get(exch)
+    if not suffix:
+        return None
+    return local.replace(' ', '') + suffix
 
 def normalize(s):
     s = str(s).lower().strip()
-    # Replace slashes with spaces so "SA/NV" becomes "SA NV"
     s = s.replace('/', ' ')
-    # Collapse abbreviation dots: n.v. → nv, s.p.a. → spa
     s = re.sub(r'([a-z])\.([a-z])\.?', r'\1\2', s)
-    # Remove all remaining punctuation
     s = re.sub(r'[^\w\s]', '', s)
-    # Remove corporate suffixes and noise words
     s = re.sub(r'\b(nv|sa|spa|plc|ag|ab|asa|oyj|se|ltd|inc|group|holding|holdings|'
                r'class [ab]|aktiengesellschaft|abp|ruckversicherungs|gesellschaft|'
                r'spolka|akcyjna|polska|banca|banco|bank|banque|cantonale|'
@@ -33,18 +51,23 @@ def normalize(s):
                r'compagnie|generali|internationale)\b', '', s)
     return re.sub(r'\s+', ' ', s).strip()
 
-# Load Excel
-wb = openpyxl.load_workbook(STOXX_FILE)
-ws170 = wb['170 Outperformers ']
-rows170 = [(r[0], r[2], r[3], r[4]) for r in ws170.iter_rows(min_row=2, max_row=171, values_only=True) if r[2]]
+# Load 170 outperformers from the new file (Constituents sheet)
+df170 = pd.read_excel(STOXX_FILE, sheet_name='Constituents')
+df170 = df170.dropna(subset=['Rank']).copy()
+df170['Rank'] = df170['Rank'].astype(int)
+df170 = df170.rename(columns={
+    'Rank': 'rank', 'Company': 'company',
+    '5Y TR (%)': 'return_5y_pct', '10Y TR (%)': 'return_10y_pct',
+    'Bloomberg': 'bb_ticker'
+})
+df170['yf_ticker'] = df170['bb_ticker'].apply(bb_to_yf_ticker)
 
-ws600 = wb['Stoxx 600 List']
-name_to_stoxx = {}
-for r in ws600.iter_rows(min_row=7, max_row=611, values_only=True):
-    if r[0] and r[1]:
-        name_to_stoxx[r[0].lower().strip()] = r[1]
+print(f"Loaded {len(df170)} companies from Constituents sheet")
+missing_yf = df170[df170['yf_ticker'].isna()]
+if len(missing_yf):
+    print(f"No YF ticker for: {missing_yf[['rank','company','bb_ticker']].to_string(index=False)}")
 
-# Load equityBicsV2 - one row per company
+# Load equityBicsV2 — one row per company for name matching
 print('Loading equityBicsV2...')
 df = pd.read_csv(CSV_FILE, low_memory=False)
 df_co = df.drop_duplicates('idBbCompany').copy()
@@ -69,30 +92,55 @@ MANUAL_IDS = {
     'Heidelberg Materials AG':                       117596,   # HeidelbergCement AG
     'Julius Baer Gruppe AG':                       17149777,   # Julius Baer Group Ltd
     'Terna S.p.A.':                                1422581,   # Terna - Rete Elettrica Nazionale
+    'Assicurazioni Generali S.p.A.':               115702,    # Assicurazioni Generali SpA (name normalizes to empty)
+    'Siemens Aktiengesellschaft':                  115746,    # Siemens AG
+    'NN Group N.V.':                               39780127,  # NN Group NV
+    'Man Group PLC':                               63087888,  # Man Group PLC/Jersey
     # Hiab Oyj Class B: not yet in Bloomberg ESG dataset (recent Cargotec spin-off)
+}
+
+# Known duplicate ID fixes — both share same idBbCompany in professor's data
+KNOWN_FIXES = {
+    'Banca Generali S.p.A.': 1135757,   # was colliding with Assicurazioni Generali
+}
+KNOWN_NULLS = {
+    'Erste Bank Polska S.A.',             # no separate Bloomberg entity
 }
 
 records = []
 unmatched = []
 
-for rank, company, r5, r10 in rows170:
-    stoxx_t = name_to_stoxx.get(company.lower().strip(), '')
-    yf_t = stoxx_to_yf(stoxx_t)
+for _, row in df170.iterrows():
+    rank = row['rank']
+    company = row['company']
+    r5 = row['return_5y_pct']
+    r10 = row['return_10y_pct']
+    bb_ticker = row['bb_ticker']
+    yf_t = row['yf_ticker']
     n = normalize(company)
     idc, matched_name = None, None
 
-    # 0. Manual override (highest priority)
-    if company in MANUAL_IDS:
+    # -1. Known null (no Bloomberg entity)
+    if company in KNOWN_NULLS:
+        idc, matched_name = None, None
+
+    # 0. Known duplicate fix
+    elif company in KNOWN_FIXES:
+        idc = KNOWN_FIXES[company]
+        matched_name = '[fix]'
+
+    # 1. Manual override
+    elif company in MANUAL_IDS:
         idc = MANUAL_IDS[company]
         matched_name = '[manual override]'
 
-    # 1. Exact normalized name match
-    if not idc and n in norm_lookup:
+    # 2. Exact normalized name match
+    elif n in norm_lookup:
         idc = norm_lookup[n]['idBbCompany']
         matched_name = norm_lookup[n]['idBbGlobalCompanyName']
 
-    # 2. Fuzzy name match (ratio > 0.85)
-    if not idc and n:
+    # 3. Fuzzy name match (ratio > 0.85, first-word guard)
+    else:
         best_score, best_norm = 0, None
         for candidate in all_norms:
             if abs(len(n) - len(candidate)) > 8:
@@ -100,8 +148,7 @@ for rank, company, r5, r10 in rows170:
             score = SequenceMatcher(None, n, candidate).ratio()
             if score > best_score:
                 best_score, best_norm = score, candidate
-        # Require first word to also match (avoids e.g. Hiab → Hifab false positives)
-        first_word_match = n.split()[0][:4] == best_norm.split()[0][:4] if n and best_norm else False
+        first_word_match = (n.split()[0][:4] == best_norm.split()[0][:4]) if n and best_norm else False
         if best_score > 0.85 and first_word_match:
             idc = norm_lookup[best_norm]['idBbCompany']
             matched_name = norm_lookup[best_norm]['idBbGlobalCompanyName']
@@ -109,10 +156,10 @@ for rank, company, r5, r10 in rows170:
     records.append({
         'rank': rank, 'company': company,
         'return_5y_pct': r5, 'return_10y_pct': r10,
-        'stoxx_ticker': stoxx_t, 'yf_ticker': yf_t,
+        'bb_ticker': bb_ticker, 'yf_ticker': yf_t,
         'idBbCompany': idc, 'matched_csv_name': matched_name
     })
-    if not idc:
+    if not idc and company not in KNOWN_NULLS:
         unmatched.append((rank, company))
 
 df_out = pd.DataFrame(records)
@@ -122,9 +169,18 @@ print(f'Unmatched ({len(unmatched)}):')
 for r, c in unmatched:
     print(f'  Rank {r}: {c}')
 
+# Verify no duplicate IDs
+dups = df_out[df_out['idBbCompany'].notna()].groupby('idBbCompany')['company'].apply(list)
+dups = dups[dups.apply(len) > 1]
+if len(dups):
+    print(f'\nWARNING: {len(dups)} duplicate Bloomberg IDs:')
+    print(dups.to_string())
+else:
+    print('\nNo duplicate Bloomberg IDs.')
+
 print()
 print('--- Full verification table ---')
-print(df_out[['rank', 'company', 'matched_csv_name', 'yf_ticker']].to_string(index=False))
+print(df_out[['rank', 'company', 'matched_csv_name', 'bb_ticker', 'yf_ticker']].to_string(index=False))
 
 df_out.to_csv(OUT_FILE, index=False)
 print(f'\nSaved to {OUT_FILE}')
