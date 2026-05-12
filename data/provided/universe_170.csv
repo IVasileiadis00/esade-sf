@@ -8,16 +8,16 @@ rank,company,return_5y_pct,return_10y_pct,bb_ticker,yf_ticker,idBbCompany,matche
 7,Zegona Communications Plc,1409.5,1353.7,ZEG LN,ZEG.L,44766439.0,Zegona Communications plc
 8,VAT Group AG,198.4,1353.3,VACN SW,VACN.SW,49328078.0,VAT Group AG
 9,AIXTRON SE,208.2,1077.1,AIXA GR,AIXA.DE,307335.0,AIXTRON SE
-10,Sectra AB Class B,126.5,1024.7,SECTB SS,SECTB.ST,815168.0,Sectra AB
-11,STMicroelectronics NV,75.8,995.1,STM IM,STM.MI,153916.0,STMicroelectronics NV
+10,Sectra AB Class B,126.5,1024.7,SECTB SS,SECT-B.ST,815168.0,Sectra AB
+11,STMicroelectronics NV,75.8,995.1,STM IM,STM,153916.0,STMicroelectronics NV
 12,CD Projekt S.A.,85.0,991.3,CDR PW,CDR.WA,7636593.0,CD Projekt SA
-13,Addtech AB Class B,113.2,956.4,ADDTB SS,ADDTB.ST,7326223.0,AddTech AB
+13,Addtech AB Class B,113.2,956.4,ADDTB SS,ADDT-B.ST,7326223.0,AddTech AB
 14,Abivax SA,385.5,903.8,ABVX FP,ABVX.PA,45848440.0,Abivax SA
 15,Pan African Resources PLC,742.5,887.2,PAF LN,PAF.L,1416781.0,Pan African Resources PLC
 16,Antofagasta plc,125.2,840.4,ANTO LN,ANTO.L,111100.0,Antofagasta PLC
 17,Mycronic AB,119.1,817.4,MYCR SS,MYCR.ST,330423.0,Mycronic AB
 18,Diploma PLC,157.2,764.1,DPLM LN,DPLM.L,111477.0,Diploma PLC
-19,Lagercrantz Group AB Class B,167.5,734.3,LAGRB SS,LAGRB.ST,7326215.0,Lagercrantz Group AB
+19,Lagercrantz Group AB Class B,167.5,734.3,LAGRB SS,LAGR-B.ST,7326215.0,Lagercrantz Group AB
 20,Benefit Systems S.A.,402.8,704.0,BFT PW,BFT.WA,24908457.0,Benefit Systems SA
 21,Gaztransport & Technigaz SA,226.1,694.2,GTT FP,GTT.PA,22247008.0,Gaztransport Et Technigaz SA
 22,Ferrari NV,78.8,674.8,RACE IM,RACE.MI,41906998.0,Ferrari NV
@@ -45,13 +45,13 @@ rank,company,return_5y_pct,return_10y_pct,bb_ticker,yf_ticker,idBbCompany,matche
 44,SPAREBANK 1 SOR-NORGE ASA,92.6,443.4,SB1NO NO,SB1NO.OL,151703.0,SpareBank 1 Sorost-Norge
 45,Schneider Electric SE,122.9,439.7,SU FP,SU.PA,115518.0,Schneider Electric SE
 46,Storebrand ASA,135.5,439.6,STB NO,STB.OL,115771.0,Storebrand ASA
-47,SSAB AB Class B,145.5,430.6,SSABB SS,SSABB.ST,118008.0,SSAB AB
+47,SSAB AB Class B,145.5,430.6,SSABB SS,SSAB-B.ST,118008.0,SSAB AB
 48,"ACS, Actividades de Construccion y Servicios SA",411.0,428.7,ACS SM,ACS.MC,117825.0,ACS Actividades de Construccion y Servicios SA
 49,Infineon Technologies AG,97.8,427.3,IFX GR,IFX.DE,835530.0,Infineon Technologies AG
 50,Commerzbank AG,539.5,426.0,CBK GR,CBK.DE,115684.0,Commerzbank AG
 51,CaixaBank SA,339.5,422.4,CABK SM,CABK.MC,13281086.0,CaixaBank SA
 52,BKW AG,102.0,415.2,BKW SW,BKW.SW,27636787.0,BKW AG
-53,Investor AB Class B,105.2,408.6,INVEB SS,INVEB.ST,115829.0,Investor AB
+53,Investor AB Class B,105.2,408.6,INVEB SS,INVE-B.ST,115829.0,Investor AB
 54,Metso Corporation,75.4,400.6,METSO FH,METSO.HE,8515484.0,[manual override]
 55,Banco BPM SpA,527.6,395.9,BAMI IM,BAMI.MI,52113849.0,Banco BPM SpA
 56,HOCHTIEF Aktiengesellschaft,666.5,394.6,HOT GR,HOT.DE,116667.0,HOCHTIEF AG
@@ -73,10 +73,10 @@ rank,company,return_5y_pct,return_10y_pct,bb_ticker,yf_ticker,idBbCompany,matche
 72,ING Bank Slaski S.A.,198.3,333.4,ING PW,ING.WA,153122.0,ING Bank Slaski SA
 73,Zurich Insurance Group Ltd,111.8,326.6,ZURN SW,ZURN.SW,961642.0,Zurich Insurance Group AG
 74,ArcelorMittal SA,103.6,319.7,MT NA,MT.AS,225547.0,ArcelorMittal SA
-75,ALK-abello A/S Class B,90.2,318.8,ALKB DC,ALKB.CO,9830847.0,ALK-Abello A/S
+75,ALK-abello A/S Class B,90.2,318.8,ALKB DC,ALK-B.CO,9830847.0,ALK-Abello A/S
 76,Asseco Poland S.A.,218.4,315.8,ACP PW,ACP.WA,310362.0,Asseco Poland SA
 77,Acciona SA,106.7,315.1,ANA SM,ANA.MC,117406.0,Acciona SA
-78,Volvo AB Class B,75.9,304.2,VOLVB SS,VOLVB.ST,115650.0,Volvo AB
+78,Volvo AB Class B,75.9,304.2,VOLVB SS,VOLV-B.ST,115650.0,Volvo AB
 79,Alfa Laval AB,81.0,304.0,ALFA SS,ALFA.ST,215856.0,Alfa Laval AB
 80,Subsea 7 S.A.,283.4,302.6,SUBC NO,SUBC.OL,119151.0,Subsea 7 SA
 81,mBank SA,366.1,300.2,MBK PW,MBK.WA,153115.0,mBank SA
@@ -128,7 +128,7 @@ rank,company,return_5y_pct,return_10y_pct,bb_ticker,yf_ticker,idBbCompany,matche
 127,Ipsen SA,112.9,222.0,IPN FP,IPN.PA,1711780.0,Ipsen SA
 128,Equinor ASA,145.3,221.6,EQNR NO,EQNR.OL,182074.0,Equinor ASA
 129,Wartsila Oyj Abp,254.4,218.6,WRT1V FH,WRT1V.HE,115782.0,Wartsila OYJ Abp
-130,Tele2 AB Class B,99.7,217.0,TEL2B SS,TEL2B.ST,180718.0,Tele2 AB
+130,Tele2 AB Class B,99.7,217.0,TEL2B SS,TEL2-B.ST,180718.0,Tele2 AB
 131,ING Groep N.V.,184.8,214.9,INGA NA,INGA.AS,115823.0,ING Groep NV
 132,Banca Generali S.p.A.,111.4,211.9,BGN IM,BGN.MI,1135757.0,[fix]
 133,Tesco PLC,129.3,211.6,TSCO LN,TSCO.L,112370.0,Tesco PLC
@@ -143,7 +143,7 @@ rank,company,return_5y_pct,return_10y_pct,bb_ticker,yf_ticker,idBbCompany,matche
 142,Azimut Holding Spa,111.4,188.9,AZM IM,AZM.MI,970983.0,Azimut Holding SpA
 143,Novartis AG,110.1,187.1,NOVN SW,NOVN.SW,180580.0,Novartis AG
 144,IMI plc,76.9,186.5,IMI LN,IMI.L,111769.0,IMI PLC
-145,Skandinaviska Enskilda Banken AB Class A,99.1,186.4,SEBA SS,SEBA.ST,116937.0,Skandinaviska Enskilda Banken AB
+145,Skandinaviska Enskilda Banken AB Class A,99.1,186.4,SEBA SS,SEB-A.ST,116937.0,Skandinaviska Enskilda Banken AB
 146,Zealand Pharma A/S,80.2,182.4,ZEAL DC,ZEAL.CO,10128160.0,Zealand Pharma A/S
 147,ENGIE S.A.,180.9,181.8,ENGI FP,ENGI.PA,156070.0,Engie SA
 148,BNP Paribas S.A. Class A,102.9,180.7,BNP FP,BNP.PA,115245.0,BNP Paribas SA
@@ -155,7 +155,7 @@ rank,company,return_5y_pct,return_10y_pct,bb_ticker,yf_ticker,idBbCompany,matche
 154,Tenaris S.A.,204.3,171.6,TEN IM,TEN.MI,7912227.0,Tenaris SA
 155,Nokia Oyj,196.3,171.3,NOKIA FH,NOKIA.HE,115790.0,Nokia Oyj
 156,Orion Oyj Class B,109.4,170.2,ORNBV FH,ORNBV.HE,10159180.0,Orion Oyj
-157,Nordea Bank Abp,139.7,170.0,NDAFI FH,NDAFI.HE,61564243.0,Nordea Bank Abp
+157,Nordea Bank Abp,139.7,170.0,NDAFI FH,NDA-FI.HE,61564243.0,Nordea Bank Abp
 158,Credit Agricole SA,66.5,168.5,ACA FP,ACA.PA,7365323.0,Credit Agricole SA
 159,Julius Baer Gruppe AG,70.3,168.1,BAER SW,BAER.SW,17149777.0,[manual override]
 160,Ackermans & van Haaren NV,124.7,166.5,ACKB BB,ACKB.BR,117002.0,Ackermans & van Haaren NV
@@ -168,4 +168,4 @@ rank,company,return_5y_pct,return_10y_pct,bb_ticker,yf_ticker,idBbCompany,matche
 167,Bank of Ireland Group Plc,264.0,157.3,BIRG ID,BIRG.IR,53427397.0,Bank of Ireland Group PLC
 168,A2A S.p.A.,68.7,153.7,A2A IM,A2A.MI,328069.0,A2A SpA
 169,Next plc,75.0,153.2,NXT LN,NXT.L,112011.0,Next PLC
-170,Trelleborg AB Class B,75.7,152.9,TRELB SS,TRELB.ST,115783.0,Trelleborg AB
+170,Trelleborg AB Class B,75.7,152.9,TRELB SS,TREL-B.ST,115783.0,Trelleborg AB
