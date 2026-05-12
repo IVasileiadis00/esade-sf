@@ -24,8 +24,8 @@ rank,company,return_5y_pct,return_10y_pct,stoxx_ticker,yf_ticker,idBbCompany,mat
 23,Prysmian S.p.A.,500.6,666.1,PRY-IT,PRY.MI,11796370.0,Prysmian SpA
 24,Huber + Suhner AG,398.5,656.6,HUBN-CH,HUBN.SW,118592.0,Huber + Suhner AG
 25,BELIMO Holding AG,163.6,649.7,BEAN-CH,BEAN.SW,176984.0,Belimo Holding AG
-26,Lion Finance Group PLC,959.8,638.6,BGEO-GB,BGEO.L,,
-27,UNIPOL ASSICURAZIONI SPA,404.8,638.4,UNI-IT,UNI.MI,,
+26,Lion Finance Group PLC,959.8,638.6,BGEO-GB,BGEO.L,60238741.0,[manual override]
+27,UNIPOL ASSICURAZIONI SPA,404.8,638.4,UNI-IT,UNI.MI,128173.0,[manual override]
 28,Camurus AB,141.1,583.2,CAMX-SE,CAMX.ST,14701634.0,Camurus AB
 29,NKT A/S,310.7,581.3,NKT-DK,NKT.CO,117816.0,NKT A/S
 30,D'Ieteren Group SA/NV,178.4,563.4,DIE-BE,DIE.BR,118920.0,D'ieteren Group
@@ -52,12 +52,12 @@ rank,company,return_5y_pct,return_10y_pct,stoxx_ticker,yf_ticker,idBbCompany,mat
 51,CaixaBank SA,339.5,422.4,CABK-ES,CABK.MC,13281086.0,CaixaBank SA
 52,BKW AG,102.0,415.2,BKW-CH,BKW.SW,27636787.0,BKW AG
 53,Investor AB Class B,105.2,408.6,INVE.B-SE,INVE-B.ST,115829.0,Investor AB
-54,Metso Corporation,75.4,400.6,METSO-FI,METSO.HE,,
+54,Metso Corporation,75.4,400.6,METSO-FI,METSO.HE,8515484.0,[manual override]
 55,Banco BPM SpA,527.6,395.9,BAMI-IT,BAMI.MI,52113849.0,Banco BPM SpA
 56,HOCHTIEF Aktiengesellschaft,666.5,394.6,HOT-DE,HOT.DE,116667.0,HOCHTIEF AG
 57,Brunello Cucinelli S.p.A.,100.1,386.8,BC-IT,BC.MI,17687148.0,Brunello Cucinelli SpA
 58,Safran SA,133.5,386.1,SAF-FR,SAF.PA,115519.0,Safran SA
-59,PKO Bank Polski SA,231.0,383.5,PKO-PL,PKO.WA,,
+59,PKO Bank Polski SA,231.0,383.5,PKO-PL,PKO.WA,201728.0,[manual override]
 60,Erste Group Bank AG,244.9,382.1,EBS-AT,EBS.VI,118738.0,Erste Group Bank AG
 61,Glencore plc,105.0,378.3,GLEN-GB,GLEN.L,199455.0,Glencore PLC
 62,Halma plc,87.0,373.5,HLMA-GB,HLMA.L,111687.0,Halma PLC
@@ -82,14 +82,14 @@ rank,company,return_5y_pct,return_10y_pct,stoxx_ticker,yf_ticker,idBbCompany,mat
 81,mBank SA,366.1,300.2,MBK-PL,MBK.WA,153115.0,mBank SA
 82,Nexans SA,145.6,298.9,NEX-FR,NEX.PA,1729045.0,Nexans SA
 83,"Banco Bilbao Vizcaya Argentaria, S.A.",327.5,296.4,BBVA-ES,BBVA.MC,100155.0,Banco Bilbao Vizcaya Argentaria SA
-84,FinecoBank SpA,75.5,296.3,FBK-IT,FBK.MI,,
+84,FinecoBank SpA,75.5,296.3,FBK-IT,FBK.MI,9475473.0,[manual override]
 85,Sulzer AG,179.1,292.2,SUN-CH,SUN.SW,116648.0,Sulzer AG
 86,SBM Offshore NV,172.8,284.5,SBMO-NL,SBMO.AS,116096.0,SBM Offshore NV
-87,AL Sydbank A/S,245.1,281.9,ALSYDB-DK,ALSYDB.CO,,
+87,AL Sydbank A/S,245.1,281.9,ALSYDB-DK,ALSYDB.CO,120301.0,[manual override]
 88,Iberdrola SA,92.7,279.5,IBE-ES,IBE.MC,115724.0,Iberdrola SA
 89,Jyske Bank A/S,211.7,279.3,JYSK-DK,JYSK.CO,120198.0,Jyske Bank A/S
 90,Beazley Plc,321.0,278.9,BEZ-GB,BEZ.L,49030384.0,Beazley PLC
-91,Munchener Ruckversicherungs-Gesellschaft AG,129.9,277.8,MUV2-DE,MUV2.DE,,
+91,Munchener Ruckversicherungs-Gesellschaft AG,129.9,277.8,MUV2-DE,MUV2.DE,117803.0,[manual override]
 92,TAURON Polska Energia S.A.,207.0,276.3,TPE-PL,TPE.WA,12460138.0,Tauron Polska Energia SA
 93,Financiere de Tubize S.A.,171.1,275.3,TUB-BE,TUB.BR,118874.0,Financiere de Tubize SA
 94,UCB S.A.,220.9,274.8,UCB-BE,UCB.BR,118116.0,UCB SA
@@ -110,14 +110,14 @@ rank,company,return_5y_pct,return_10y_pct,stoxx_ticker,yf_ticker,idBbCompany,mat
 109,Elia Group SA/NV,70.7,248.9,ELI-BE,ELI.BR,7559480.0,Elia Group SA/NV
 110,Balfour Beatty plc,187.1,248.2,BBY-GB,BBY.L,111200.0,Balfour Beatty PLC
 111,VZ Holding AG,144.2,248.2,VZN-CH,VZN.SW,11599516.0,VZ Holding AG
-112,Compagnie Financiere Richemont SA,117.4,247.0,CFR-CH,CFR.SW,,
+112,Compagnie Financiere Richemont SA,117.4,247.0,CFR-CH,CFR.SW,117896.0,[manual override]
 113,Legrand SA,95.0,247.0,LR-FR,LR.PA,10575328.0,Legrand SA
 114,Allianz SE,107.6,245.6,ALV-DE,ALV.DE,115649.0,Allianz SE
 115,Intesa Sanpaolo S.p.A.,196.5,243.6,ISP-IT,ISP.MI,128042.0,Intesa Sanpaolo SpA
 116,Sacyr SA,126.7,243.1,SCYR-ES,SCYR.MC,115759.0,Sacyr SA
 117,Fresnillo PLC,327.1,241.5,FRES-GB,FRES.L,14453817.0,Fresnillo PLC
 118,DNB Bank ASA,87.2,241.1,DNB-NO,DNB.OL,135072.0,DNB Bank ASA
-119,KBC Ancora SCA,145.8,236.5,KBCA-BE,KBCA.BR,,
+119,KBC Ancora SCA,145.8,236.5,KBCA-BE,KBCA.BR,7282482.0,[manual override]
 120,NN Group N.V.,111.6,232.6,NN-NL,NN.AS,136312.0,NN Inc
 121,Coca-Cola HBC AG,82.7,232.3,CCH-GB,CCH.L,32947065.0,Coca-Cola HBC AG
 122,Hiab Oyj Class B,120.8,230.9,HIAB-FI,HIAB.HE,,
@@ -137,8 +137,8 @@ rank,company,return_5y_pct,return_10y_pct,stoxx_ticker,yf_ticker,idBbCompany,mat
 136,Erste Bank Polska S.A.,238.9,205.7,EBP-PL,EBP.WA,118738.0,Erste Group Bank AG
 137,NatWest Group Plc,239.3,205.4,NWG-GB,NWG.L,112194.0,NatWest Group PLC
 138,"Banco Santander, S.A.",237.0,201.9,SAN-ES,SAN.MC,100158.0,Banco Santander SA
-139,Buzzi Spa,117.4,201.5,BZU-IT,BZU.MI,,
-140,Helvetia Baloise Holding AG,174.3,200.1,HBAN-CH,HBAN.SW,,
+139,Buzzi Spa,117.4,201.5,BZU-IT,BZU.MI,866731.0,[manual override]
+140,Helvetia Baloise Holding AG,174.3,200.1,HBAN-CH,HBAN.SW,191206.0,[manual override]
 141,Drax Group plc,144.2,193.7,DRX-GB,DRX.L,9093820.0,Drax Group PLC
 142,Azimut Holding Spa,111.4,188.9,AZM-IT,AZM.MI,970983.0,Azimut Holding SpA
 143,Novartis AG,110.1,187.1,NOVN-CH,NOVN.SW,180580.0,Novartis AG
@@ -148,20 +148,20 @@ rank,company,return_5y_pct,return_10y_pct,stoxx_ticker,yf_ticker,idBbCompany,mat
 147,ENGIE S.A.,180.9,181.8,ENGI-FR,ENGI.PA,156070.0,Engie SA
 148,BNP Paribas S.A. Class A,102.9,180.7,BNP-FR,BNP.PA,115245.0,BNP Paribas SA
 149,Banque Cantonale Vaudoise,84.1,179.2,BCVN-CH,BCVN.SW,118520.0,Banque Cantonale Vaudoise
-150,ORLEN Spolka Akcyjna,147.2,175.1,PKN-PL,PKN.WA,,
+150,ORLEN Spolka Akcyjna,147.2,175.1,PKN-PL,PKN.WA,823804.0,[manual override]
 151,Powszechny Zaklad Ubezpieczen Spolka Akcyjna,143.2,173.9,PZU-PL,PZU.WA,944127.0,Powszechny Zaklad Ubezpieczen SA
-152,Heidelberg Materials AG,170.2,172.3,HEI-DE,HEI.DE,,
+152,Heidelberg Materials AG,170.2,172.3,HEI-DE,HEI.DE,117596.0,[manual override]
 153,Serco Group plc,99.7,172.0,SRP-GB,SRP.L,112244.0,Serco Group PLC
 154,Tenaris S.A.,204.3,171.6,TEN-IT,TEN.MI,7912227.0,Tenaris SA
 155,Nokia Oyj,196.3,171.3,NOKIA-FI,NOKIA.HE,115790.0,Nokia Oyj
 156,Orion Oyj Class B,109.4,170.2,ORNBV-FI,ORNBV.HE,10159180.0,Orion Oyj
 157,Nordea Bank Abp,139.7,170.0,NDA.FI-FI,NDA-FI.HE,61564243.0,Nordea Bank Abp
 158,Credit Agricole SA,66.5,168.5,ACA-FR,ACA.PA,7365323.0,Credit Agricole SA
-159,Julius Baer Gruppe AG,70.3,168.1,BAER-CH,BAER.SW,,
+159,Julius Baer Gruppe AG,70.3,168.1,BAER-CH,BAER.SW,17149777.0,[manual override]
 160,Ackermans & van Haaren NV,124.7,166.5,ACKB-BE,ACKB.BR,117002.0,Ackermans & van Haaren NV
 161,Endesa S.A.,94.9,166.3,ELE-ES,ELE.MC,100517.0,Endesa SA
 162,Man Group PLC,106.2,164.5,EMG-GB,EMG.L,115730.0,MAN SE
-163,Terna S.p.A.,89.1,162.4,TRN-IT,TRN.MI,,
+163,Terna S.p.A.,89.1,162.4,TRN-IT,TRN.MI,1422581.0,[manual override]
 164,AXA SA,116.7,161.8,CS-FR,CS.PA,115239.0,AXA SA
 165,Barclays PLC,148.5,160.6,BARC-GB,BARC.L,100169.0,Barclays PLC
 166,Repsol SA,140.7,158.2,REP-ES,REP.MC,101254.0,Repsol SA

@@ -52,6 +52,26 @@ df_co['_norm'] = df_co['idBbGlobalCompanyName'].fillna('').apply(normalize)
 norm_lookup = df_co.drop_duplicates('_norm').set_index('_norm')[['idBbCompany', 'idBbGlobalCompanyName']].to_dict('index')
 all_norms = list(norm_lookup.keys())
 
+# Manual overrides for companies whose names differ too much for automatic matching
+MANUAL_IDS = {
+    'Lion Finance Group PLC':                       60238741,  # Bank of Georgia Group PLC
+    'UNIPOL ASSICURAZIONI SPA':                      128173,   # UnipolSai Assicurazioni SpA
+    'Metso Corporation':                            8515484,   # Metso Outotec Oyj
+    'PKO Bank Polski SA':                            201728,   # Powszechna Kasa Oszczednosci Bank Polski SA
+    'FinecoBank SpA':                               9475473,   # FinecoBank Banca Fineco SpA
+    'AL Sydbank A/S':                                120301,   # Sydbank AS
+    'Munchener Ruckversicherungs-Gesellschaft AG':   117803,   # Muenchener Rueckversicherungs-Gesellschaft AG
+    'Compagnie Financiere Richemont SA':             117896,   # Cie Financiere Richemont SA
+    'KBC Ancora SCA':                               7282482,   # KBC Ancora
+    'Buzzi Spa':                                     866731,   # Buzzi Unicem SpA
+    'Helvetia Baloise Holding AG':                   191206,   # Helvetia Holding AG
+    'ORLEN Spolka Akcyjna':                          823804,   # Polski Koncern Naftowy ORLEN SA
+    'Heidelberg Materials AG':                       117596,   # HeidelbergCement AG
+    'Julius Baer Gruppe AG':                       17149777,   # Julius Baer Group Ltd
+    'Terna S.p.A.':                                1422581,   # Terna - Rete Elettrica Nazionale
+    # Hiab Oyj Class B: not yet in Bloomberg ESG dataset (recent Cargotec spin-off)
+}
+
 records = []
 unmatched = []
 
@@ -61,13 +81,18 @@ for rank, company, r5, r10 in rows170:
     n = normalize(company)
     idc, matched_name = None, None
 
+    # 0. Manual override (highest priority)
+    if company in MANUAL_IDS:
+        idc = MANUAL_IDS[company]
+        matched_name = '[manual override]'
+
     # 1. Exact normalized name match
-    if n in norm_lookup:
+    if not idc and n in norm_lookup:
         idc = norm_lookup[n]['idBbCompany']
         matched_name = norm_lookup[n]['idBbGlobalCompanyName']
 
     # 2. Fuzzy name match (ratio > 0.85)
-    if not idc:
+    if not idc and n:
         best_score, best_norm = 0, None
         for candidate in all_norms:
             if abs(len(n) - len(candidate)) > 8:
