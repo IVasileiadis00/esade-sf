@@ -8,8 +8,9 @@ venv/
 # Mock price data (large file)
 data/market/
 
-# Temp Word lock files
+# Temp Office lock files
 ~$*.docx
+~$*.xlsx
 
 # Python cache
 __pycache__/
