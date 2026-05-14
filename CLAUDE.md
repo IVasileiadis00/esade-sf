@@ -19,23 +19,24 @@ This is an academic prototype — not a regulated investment product or financia
 2. In the project folder, double-click `setup.bat` — this installs all packages and creates the Jupyter kernel
 3. Double-click `launch_jupyter.bat` to open Jupyter Notebook in your browser
 
-**Normal usage:** Double-click `launch_jupyter.bat`, then run notebooks in order (agent02 → agent03 → agent10 → agent05_06 → agent07 → agent08 → [RAG Operator fills Excel] → agent09 → agent11 → agent12 → agent13).
+**Normal usage:** Double-click `launch_jupyter.bat`, then run notebooks in order (01 → 02 → 03 → 04 → 05 → [RAG Operator fills Excel] → 06 → 07 → 08 → 09 → 10 → 11 → 12).
 
 **Notebooks (run in this order):**
-| Notebook | Agent # | What it does |
-|----------|---------|-------------|
-| `notebooks/agent02_data_ingestion.ipynb` | Agent 2 — Data Ingestion | Loads 4 CSVs, downloads prices via yfinance, renames columns, saves master dataset |
-| `notebooks/agent03_data_quality.ipynb` | Agent 3 — Data Quality | Missing-value audit, outlier detection, data dictionary, taxonomy note |
-| `notebooks/agent10_financial_analysis.ipynb` | Agent 10 — Financial Analysis | Calculates returns, volatility, Sharpe ratio, drawdown; applies volatility cap (>40% excluded) |
-| `notebooks/agent05_06_esg_climate.ipynb` | Agents 5 & 6 — ESG + Climate | SASB materiality weights, E/S/G scores (0–100), ESG triangulation, WACI |
-| `notebooks/agent07_biodiversity.ipynb` | Agent 7 — Biodiversity | Nature-risk proxy scores (ENCORE + WRI Aqueduct) per company |
-| `notebooks/agent08_eu_regulation.ipynb` | Agent 8 — EU Regulation | EU Taxonomy eligibility, SFDR Article 8 compliance, PAI indicators |
-| `data/rag/RAG_Screening_Sheet_Workbook_v1.xlsx` | RAG Operator (manual) | Fill in RAG Screening Sheet for Deep Review companies; Agent 9 reads this file |
-| `notebooks/agent04_document_intelligence.ipynb` | Agent 4 — Document Intelligence | Imports Claude Projects RAG extractions from sustainability report PDFs |
-| `notebooks/agent09_greenwashing.ipynb` | Agent 9 — Greenwashing | Reads Excel workbook, runs 8-Test scoring, applies exclusions |
-| `notebooks/agent11_portfolio_construction.ipynb` | Agent 11 — Portfolio Construction | Merges all scores, applies exclusions, correlation filter, selects 20 holdings |
-| `notebooks/agent12_human_review.ipynb` | Agent 12 — Human Review | Override decision log, AI Use Statement |
-| `notebooks/agent13_reporting.ipynb` | Agent 13 — Reporting | Generates charts and factsheet metrics |
+| Notebook | Agent | What it does |
+|----------|-------|-------------|
+| `notebooks/01_mandate.ipynb` | Agent 1 — Mandate | Defines investment thesis, scoring weights, exclusion rules; saves mandate.json |
+| `notebooks/02_data_ingestion.ipynb` | Agent 2 — Data Ingestion | Loads 4 CSVs, downloads prices via yfinance, renames columns, saves master dataset |
+| `notebooks/03_data_quality.ipynb` | Agent 3 — Data Quality | Missing-value audit, outlier detection, data dictionary, taxonomy note |
+| `notebooks/04_financial_analysis.ipynb` | Agent 10 — Financial Analysis | Calculates returns, volatility, Sharpe ratio, drawdown; applies volatility cap (>40% excluded) |
+| `notebooks/05_esg_climate.ipynb` | Agents 5 & 6 — ESG + Climate | SASB materiality weights, E/S/G scores (0–100), ESG triangulation, WACI |
+| `data/rag/RAG_Screening_Sheet_Workbook_v1.xlsx` | RAG Operator (manual) | Fill in greenwashing 8-Test for all 20 portfolio holdings; Agent 09 reads this file |
+| `notebooks/06_document_intelligence.ipynb` | Agent 4 — Document Intelligence | Imports Claude Projects RAG extractions from sustainability report PDFs |
+| `notebooks/07_biodiversity.ipynb` | Agent 7 — Biodiversity | Nature-risk proxy scores (ENCORE + WRI Aqueduct) per company |
+| `notebooks/08_eu_regulation.ipynb` | Agent 8 — EU Regulation | EU Taxonomy eligibility, SFDR Article 8 compliance, PAI indicators |
+| `notebooks/09_greenwashing.ipynb` | Agent 9 — Greenwashing | Reads Excel workbook, runs 8-Test scoring, applies exclusions |
+| `notebooks/10_portfolio_construction.ipynb` | Agent 11 — Portfolio Construction | Merges all scores, applies exclusions, correlation filter, selects 20 holdings |
+| `notebooks/11_human_review.ipynb` | Agent 12 — Human Review | Override decision log, AI Use Statement |
+| `notebooks/12_reporting.ipynb` | Agent 13 — Reporting | Generates charts and factsheet metrics |
 
 **Output files land in:**
 - `outputs/scores/` — master dataset, ESG scores, financial metrics
