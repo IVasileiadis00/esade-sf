@@ -1,0 +1,26 @@
+ticker,reason
+ZS3,Subsidiary of CRIN — excluded to prevent carbon double-counting
+6GF,Subsidiary of INN1 — excluded to prevent carbon double-counting
+B7A,Subsidiary of ASG — excluded to prevent carbon double-counting
+KB9,Subsidiary of KDB — excluded to prevent carbon double-counting
+FTD,No ESG data (all three pillars NaN) — excluded per hallucination control policy
+1ZG,No ESG data (all three pillars NaN) — excluded per hallucination control policy
+7CA,No ESG data (all three pillars NaN) — excluded per hallucination control policy
+2X1,No ESG data (all three pillars NaN) — excluded per hallucination control policy
+EZ4,No ESG data (all three pillars NaN) — excluded per hallucination control policy
+SEBA,ESG score below floor (48.3 < 50.1)
+RWE,ESG score below floor (47.2 < 50.1)
+HOT,ESG score below floor (47.9 < 50.1)
+8RJ,ESG score below floor (42.3 < 50.1)
+KDB,ESG score below floor (42.9 < 50.1)
+UCM,ESG score below floor (41.2 < 50.1)
+TLLB,ESG score below floor (44.0 < 50.1)
+NXS,ESG score below floor (44.4 < 50.1)
+DJDA,ESG score below floor (45.1 < 50.1)
+HDB,ESG score below floor (37.7 < 50.1)
+ARRD,ESG score below floor (45.1 < 50.1)
+GZF,ESG score below floor (46.7 < 50.1)
+AZZ2,ESG score below floor (49.5 < 50.1)
+KB9,ESG score below floor (47.5 < 50.1)
+4SP,ESG score below floor (48.6 < 50.1)
+2D7,ESG score below floor (49.8 < 50.1)

@@ -1,0 +1,46 @@
+# Python virtual environment — never upload this
+venv/
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+**/.ipynb_checkpoints/
+
+# PDF company reports — 342MB total, too large for GitHub; store locally or in shared drive
+*.pdf
+
+# Course-provided large CSV (51MB — exceeds GitHub recommended limit)
+# Obtain from course data pack: equityBicsV2.csv
+data/provided/equityBicsV2.csv
+
+# Downloaded financial data (regenerate via scripts/financial/fetch_price_data_template.py)
+data/financial/raw_prices/
+data/financial/raw_benchmark/
+
+# Assignment guidance zip — course material, not needed in repo
+*.zip
+
+# Mock price data (large file)
+data/market/
+
+# Temp Office lock files
+~$*.docx
+~$*.xlsx
+~$*.pdf
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Sensitive / local config
+.env
+*.local
+
+# Visual Studio / IDE files
+.vs/
+.claude/
+*.slnx
