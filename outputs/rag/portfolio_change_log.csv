@@ -1,0 +1,1 @@
+timestamp,bloomberg_ticker,company_name,previous_status,new_status,action_taken,triggering_module,triggering_reason,supporting_evidence_summary,source_document,source_url,evidence_confidence,analyst_override,override_reason,replacement_company_if_any
